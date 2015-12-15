@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MuseumArtApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+	<body>
+	  <div class="container">
+		  <ul class="nav nav-tabs">
+			 <li><%= link_to "All Museums", museums_path %></li>
+			 <li><%= link_to "All Paintings", paintings_path %></li>
+			 <li><%= link_to "Add New Painting", new_painting_path %></li>
+		  </ul>
+		<div class="container">
+		  <div id="container">
+		   <%= yield %>
+		  </div>
+		</div>
+	  </div>
+
+	</body>
+</html>

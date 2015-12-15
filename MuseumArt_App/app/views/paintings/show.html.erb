@@ -1,0 +1,9 @@
+<h1>Show Paintings and Images in Collection</h1>
+<h1><%= @painting.title %></h1>
+	<p><strong>Artist</strong>: <%= @painting.artist %></p>
+	<p><strong>Year</strong>: <%= @painting.date %></p>
+	<p><strong>Museum</strong>: <%= @painting.museum %></p>
+	<%= image_tag @painting.image %>
+<br/>
+<%= link_to "Edit this painting.", edit_painting_path(@painting) %>	
+<br/><br/>

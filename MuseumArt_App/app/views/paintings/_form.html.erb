@@ -1,0 +1,39 @@
+<% if @painting.errors.any? %>
+  <h2>There was a problem saving your painting or image.</h2>
+  <ul>
+  	<% @painting.errors.full_messages.each do |msg| %>
+  		<li><%= msg %></li>
+  	<% end %>	
+  </ul>
+<% end %>
+
+<%= form_for @painting do |f| %>
+  <fieldset>
+  	<div class='fields'>
+  	   <%= f.label :title %>
+  	   <%= f.text_field :title %>
+  	</div>
+
+  	<div class='fields'>
+  	   <%= f.label :year %>
+  	   <%= f.text_field :date %>
+  	</div>
+
+  	<div class='fields'>
+  	   <%= f.label :artist %>
+  	   <%= f.text_field :artist %>
+  	</div>
+
+  	<div class='fields'>
+  	   <%= f.label :image %>
+  	   <%= f.text_field :image %>
+  	</div>
+  	</div class='fields'>
+  		<%= f.label :museum %>
+  		<%= f.select :museum_id, Museum.all.collect {|museum| [museum.name, museum.id]} %>
+  	<div>
+
+  </fieldset>
+  <%= f.submit %>
+<% end %>
+<br/>

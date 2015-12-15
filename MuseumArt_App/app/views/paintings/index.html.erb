@@ -1,0 +1,27 @@
+<h1>Museum Art</h1>
+
+<p>View inventory below or search by title here.</p>
+<%= form_tag "/", method: :get do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag "Search" %>
+<% end %>
+<br/><hr/>
+<strong>Inventory</strong>
+<% if @paintings.any? %>
+
+	<% @paintings.each do |painting| %>
+	  <section>
+	  	<h3><b>Title</b>: <%= link_to painting.title, paintings_path %></h3>
+	  	<%= image_tag painting.image %>
+	  	<p><b>Artist</b>: <%= painting.artist %></p>
+	  	<p><b>Year</b>: <%= painting.date %></p>
+	  	<p><b>Museum</b>: <%= link_to painting.museum, museums_path %></p>
+	  	<hr>
+	  </section>
+	<% end %> 
+
+<% else %>
+
+<h3>Sorry the painting you search for is not in the database.</h3>
+
+<% end %>

@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Cinzel+Decorative);
+@import url(http://fonts.googleapis.com/css?family=Quattrocento);
+
+* {
+  font-family: 'Quattrocento', sans-serif;
+}
+
+h1, h2, h3, h4, h4 {
+  font-family: 'Cinzel Decorative', sans-serif;
+}
+
+#container {
+  width: 500px;
+  margin: 0px auto;
+  text-align:center;
+  border: 1px solid #eee;
+}
+
+input {
+  font-size: 16px;
+}
+
+input[type='submit'] {
+  font-size: 16px;
+  line-height: 16px;
+}
+
+hr {
+  background-color: #eee;
+}
+
+img{
+	
+	height: 300px;
+}

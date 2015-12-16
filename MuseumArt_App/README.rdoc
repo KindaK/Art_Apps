@@ -3,6 +3,9 @@ Museum Art App
 
 Museum Art App is in development. The app displays images of paintings, sculptures, and textiles owned by museums and galleries. 
 
+Deployment Instructions
+* View Museum Art App indevmuseum.herokuapp.com
+
 Features:
 * Search
 	-database 

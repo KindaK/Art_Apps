@@ -5,6 +5,7 @@ Museum Art App is in development. The app displays images of paintings, sculptur
 
 Features:
 * Search
+
 	-database 
 * Database creation
 * Validates data
